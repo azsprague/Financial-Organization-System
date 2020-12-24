@@ -3,19 +3,24 @@ package system;
 import java.io.File;
 
 /**
- * Runner class for the system. Contains the main() method.
+ * Runner class for the system. Contains the main() method. Invocation for the
+ * system (as a jar file) is:
+ * 
+ *      java -jar FOS.jar <Script File> <DB File>
  * 
  * @author Aidan Sprague
- * @version 2020.12.21
+ * @version 2020.12.23
  */
 public class Runner {
     
     /**
-     * 
+     * Runs the system. Checks the parameters and files before sending them off to
+     * a ScriptHandler.
+     * @param args      System arguments
      */
     public static void main(String[] args) {
         if (args.length != 2) {
-            System.err.println("Invocation: Runner <Script File> <DB File>");
+            System.err.println("Invocation: java -jar FOS.jar <Script File> <DB File>");
             System.exit(1);
         }
         
