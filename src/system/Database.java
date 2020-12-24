@@ -415,7 +415,7 @@ public class Database {
     /**
      * Formats a money float to a more human-readable version; for example:
      * 
-     *      2573.8  ->  $2,573.50
+     *      2573.8  ->  $2,573.80
      *      
      * @param amount    The money float to be formatted
      * @return a string containing the above information.
