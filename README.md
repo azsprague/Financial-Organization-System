@@ -17,7 +17,13 @@ are specific commands available to insert and retrieve information:
 To run this system, I first group the files into a jar file by the name of FOS.jar, then run with the
 following command:  
   
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;java -jar FOS.jar \[script file\] \[database file\]
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;java -jar FOS.jar \[script file\] \[database file\]  
+  
+A typical script file might look something like this:  
+  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;add_fund fund1 $5,000.00 12/31/2021  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;add_purchase fund1 $1,000.00 Aidan 12/24/2020 Misc  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;exit  
 
 ## Libraries
 Several libraries were used in this build. Specifically, two of them were crucial in connecting
@@ -31,4 +37,9 @@ This system is a work in progress; as such, there are numerous things I wish to 
 future. Chiefly, the system is designed to work around VT Student Engineer's Council type funds
 (at least in the way the system formats them). I hope to change this to be more flexible with other
 fund types. Additionally, the system only runs with a supplied script file which is useful for 
-multiple commands, however having a line-by-line input could be beneficial.
+multiple commands, however having a line-by-line input could be beneficial.  
+  
+Other features planned include:
+- Informing the user when a fund is almost expired / has expired
+- Informing the user when a fund is empty 
+- Not allowing the user to add a purchase to an empty fund
